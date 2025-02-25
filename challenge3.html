@@ -1,0 +1,204 @@
+<!-- 
+Challenge3: Build a Dynamic List with Styling
+Your task is to create a webpage that displays a list of numbers. The page should have two buttons: one for adding a number to the list and one for removing the last number from the list. The page should have a dynamic design and react smoothly to user interaction.
+
+Requirements:
+HTML Structure:
+
+Create an <h1> element with the title "Dynamic List".
+Display a paragraph <p> that says "My List:" and show the numbers in the list inside a <span>.
+Add two buttons: one with the text +1 to add a new number to the list, and another with the text -1 to remove the last number from the list.
+JavaScript Functionality:
+
+Create an array of numbers (initially [1, 2, 3, 4, 5]).
+The +1 button should add the next number to the list. If the list has reached 10 numbers, it should reset the list to an empty array and start over.
+The -1 button should remove the last number from the list.
+After every addition or removal, the numbers in the list should be dynamically updated in the <span> element.
+CSS Styling:
+
+Apply a clean and modern look to the webpage.
+Use CSS variables for consistent color themes and font sizes.
+Use Flexbox to center the content both vertically and horizontally.
+Add smooth transitions for buttons and background color changes.
+Create a hover effect that increases the size of the button.
+Add a press effect (active state) when the button is clicked.
+Ensure the page is responsive, with elements adjusting to different screen sizes (use media queries for smaller screens).
+Animation:
+
+Add a subtle animation for the heading (<h1>) so that it fades in and moves up slightly when the page loads.
+Bonus:
+
+Customize the list with a different background color and box shadow for the numbers.
+Add a small loading animation for when the number updates.
+Example Solution:
+In your code, focus on the following concepts:
+
+Event Handling: Learn how to add functionality to buttons with JavaScript.
+Dynamic Content Update: Use innerHTML to update the list on the page when a number is added or removed.
+Responsive Design: Use media queries to adjust layout and styles based on the screen size.
+Smooth Transitions and Animations: Use CSS transitions and keyframe animations to create smooth user experiences.
+Hints:
+Use document.querySelector or document.getElementsByTagName to manipulate DOM elements.
+Use the push method to add items to the array and pop to remove items.
+Try using CSS variables to manage color themes and sizes for easier code management.
+Objective:
+By the end of this challenge, you should be able to:
+
+Create a dynamic, interactive list.
+Style the list and buttons with modern CSS techniques.
+Implement responsive design and smooth animations. 
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 2</title>
+    <style>
+       
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+   
+       :root {
+           --primary-color: #4CAF50;
+           --secondary-color: #627862;
+           --highlight-color: #007acc;
+           --background-color: #c8c6c6;
+           --text-color: #555;
+           --font-family: 'Arial', sans-serif;
+           --border-radius: 10px;
+           --button-padding: 12px 25px;
+           --font-size-large: 2.5rem;
+           --font-size-medium: 1.5rem;
+           --font-size-small: 1rem;
+       }
+
+       body {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+           height: 100vh;
+           background-color: var(--background-color);
+           font-family: var(--font-family);
+           text-align: center;
+           padding: 20px;
+           color: var(--text-color);
+       }
+
+       h1 {
+           font-size: var(--font-size-large);
+           color: #4b8b3b;
+           margin-bottom: 20px;
+           text-shadow: 2px 2px 20px rgba(23, 23, 67, 0.9);
+           box-shadow: 1px 1px 17px rgba(45, 67, 239, 0.1);
+           animation: fadeIn 1s ease-out;
+       }
+
+       p {
+           color: var(--text-color);
+           margin-top: 20px;
+           font-size: 1.2rem;
+           font-weight: bold;
+       }
+
+       span {
+           color: var(--highlight-color);
+           font-weight: bold;
+           font-size: var(--font-size-medium);
+           padding: 5px;
+           background-color: #e0f7fa;
+           border-radius: 5px;
+           box-shadow: 2px 2px 8px rgba(24, 251, 3, 0.2);
+       }
+
+       button {
+           background-color: var(--primary-color);
+           margin: 15px;
+           font-size: 1.1rem;
+           padding: var(--button-padding);
+           border-radius: var(--border-radius);
+           border: none;
+           color: white;
+           font-weight: bolder;
+           cursor: pointer;
+           box-shadow: 0 4px 8px rgba(30, 30, 30, 0.2);
+           transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s ease;
+       }
+
+       button:hover {
+           background-color: var(--secondary-color);
+           transform: scale(1.1);
+           box-shadow: 0 6px 12px rgba(30, 30, 30, 0.3);
+       }
+
+       button:active {
+           transform: scale(1);
+           box-shadow: 0 2px 4px rgba(30, 30, 30, 0.2);
+       }
+
+   
+       @media (max-width: 600px) {
+           h1 {
+               font-size: 2rem;
+           }
+
+           p {
+               font-size: var(--font-size-small);
+           }
+
+           button {
+               font-size: 1rem;
+               padding: 10px 20px;
+           }
+       }
+
+    
+       @keyframes fadeIn {
+           0% {
+               opacity: 0;
+               transform: translateY(-30px);
+           }
+           100% {
+               opacity: 1;
+               transform: translateY(0);
+           }
+       }
+    </style>
+</head>
+<body>
+    <h1>Challenge 2</h1>
+    <p>My List: <span>0</span></p>
+    <button onclick="increase()">+1</button>
+    <button onclick="decrease()">-1</button>
+
+    <script>
+        let myList = [1, 2, 3, 4, 5];
+        let count = document.getElementsByTagName("span")[0];
+        count.innerHTML = myList.join(", ");
+        
+        let increase = () => {
+            if (myList.length >= 10) {
+                myList = [];
+            } else {
+                myList.push(myList.length + 1);
+            }
+            count.innerHTML = myList.join(", ");
+        }
+
+        let decrease = () => {
+            if (myList.length > 0) {
+                myList.pop();
+                count.innerHTML = myList.join(", ");
+            }
+        }
+    </script>
+</body>
+</html>

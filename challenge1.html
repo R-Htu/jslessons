@@ -1,0 +1,160 @@
+<!--
+Challenge 1: Build and Style a Counter Application
+Objective:
+Your task is to create a simple interactive counter application that allows users to increase or decrease a number displayed on the screen.
+
+Requirements:
+HTML:
+
+Create a heading that says "Challenge 1".
+Display a text message below the heading that says "List: ", followed by a number (starting at 0) inside a span tag.
+Add two buttons: one that increases the number and one that decreases the number.
+CSS:
+
+Style the page to center everything in the middle of the screen.
+Set a pleasant background color for the page.
+Style the heading (<h1>) with a font size of 2.5rem, and make it green with a subtle shadow.
+Style the span that holds the number so that it stands out with a light blue background and rounded corners.
+Style the buttons:
+Use a green color for the button, and change the button color to a darker green when hovered.
+Add smooth transitions for the button’s hover and active states.
+Ensure the page is responsive, so it adjusts nicely when viewed on smaller screens.
+JavaScript:
+
+Create two functions: increase() and decrease().
+The increase() function should increment the number displayed in the span by 1.
+The decrease() function should decrement the number displayed in the span by 1.
+Bonus: Include a function test() that logs a message to the console. Call this function with a name parameter and display a greeting message in the console.
+Animation:
+
+Add an animation that fades in the heading when the page is loaded.
+Challenge Bonus:
+Make sure your buttons have visual effects on hover and when clicked (e.g., button color change, shadow effect, etc.).
+The text and button sizes should adjust smoothly when the window is resized to ensure the page is mobile-friendly.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #4b8b3b;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        span {
+            font-size: 1.5rem;
+            color: #007acc;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #e0f7fa;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 12px 25px;
+            margin: 15px 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            background-color: #387d3b;
+            transform: translateY(2px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Challenge 1</h1>
+    <div><p>List: <span>0</span></p></div>
+    <button onclick="increase()">+1</button>
+    <button onclick="decrease()">-1</button>
+
+    <script>
+        let test = (name = "Lotus") => console.log(`My name is ${name}`);
+        test("MyWorld");
+
+        let count = document.getElementsByTagName("span")[0];
+
+        let increase = () => {
+            count.innerHTML = parseInt(count.innerHTML) + 1;
+        };
+
+        let decrease = () => {
+            count.innerHTML = parseInt(count.innerHTML) - 1;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!-- 
+Challenge2: Build an Interactive Counter with Styling
+Your task is to create a webpage that displays a list of numbers and allows users to dynamically increase or decrease the number of items in the list. The page should be styled with modern CSS techniques, and the buttons should have interactive effects for a better user experience.
+
+Requirements:
+HTML Structure:
+
+Create an <h1> element with the title "Challenge 2".
+Display a paragraph <p> that shows "My List:" followed by the list of numbers inside a <span>.
+Add two buttons:
+A button labeled +1 that increases the list by adding a new number.
+A button labeled -1 that removes the last number from the list.
+JavaScript Functionality:
+
+Create an initial array myList with numbers [1, 2, 3, 4, 5].
+The +1 button should add the next number to the list (for example, if the current list ends at 5, it should add 6). You can do this by dynamically pushing the next number to the array.
+The -1 button should remove the last number from the list.
+After each click of the buttons, the <span> element should be updated to show the current list of numbers.
+CSS Styling:
+
+Apply a clean, user-friendly layout for the webpage.
+The background color of the page should be light (e.g., light blue or soft gray).
+Add hover and active button effects:
+The button should slightly change color when hovered over.
+When clicked, the button should slightly shrink and change color.
+Style the <span> to visually distinguish the number list, with rounded corners and a background color.
+Apply a subtle animation on the heading (<h1>) to make it appear smoothly when the page is loaded.
+Responsive Design:
+
+Use media queries to adjust the font size and padding for smaller screen sizes (e.g., mobile devices).
+Ensure that the buttons remain easy to interact with on smaller devices.
+Bonus:
+
+Add additional styling for a smooth hover effect on the buttons, including scale and shadow changes when hovered and clicked.
+Implement a fade-in animation on page load to make the content appear with a subtle effect.
+Example Solution:
+In your code, focus on learning the following:
+
+Event Handling: Use JavaScript to attach click events to the buttons.
+DOM Manipulation: Update the content of the <span> dynamically based on user interaction.
+CSS Transitions and Animations: Apply smooth transitions to buttons and animations to elements for a better visual experience.
+Responsive Web Design: Make sure your page looks good and is easy to navigate on both large and small screens.
+Objective:
+By the end of this challenge, you should be able to:
+
+Use JavaScript to dynamically add and remove items from an array and update the webpage.
+Apply modern CSS techniques to style a webpage and create interactive elements.
+Ensure the page is responsive and adapts to different screen sizes. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 2</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #4b8b3b;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        span {
+            font-size: 1.5rem;
+            color: #007acc;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #e0f7fa;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 12px 25px;
+            margin: 15px 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            background-color: #387d3b;
+            transform: translateY(2px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
+       
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Challenge 2</h1>
+    <p>My List: <span>0</span></p>
+    <button onclick="increase()">+1</button>
+    <button onclick="decrease()">-1</button>
+
+    <script>
+        let myList = [1, 2, 3, 4, 5];
+        let count = document.getElementsByTagName("span")[0];
+        count.innerHTML = myList.join(", ");
+        
+        let increase = () => {
+            myList.push(myList.length + 1);
+            count.innerHTML = myList.join(", ");
+        }
+
+        let decrease = () => {
+            myList.pop();
+            count.innerHTML = myList.join(", ");
+        }
+    </script>
+</body>
+</html>
