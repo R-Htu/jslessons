@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Text Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #message {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 80%;
+            margin-top: 10px;
+            transition: border-color 0.3s ease;
+        }
+        input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        .empty-message {
+            color: red;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="message">Challenge 4</p>
+        <input type="text" id="myInput" placeholder="Type something...">
+        <p class="empty-message" id="emptyMessage" style="display: none;">Please type something!</p>
+    </div>
+
+    <script>
+        let user = document.getElementById('message');
+        let inputField = document.getElementById('myInput');
+        let emptyMessage = document.getElementById('emptyMessage');
+
+        inputField.addEventListener('input', (e) => {
+            user.innerHTML = e.target.value;
+
+           
+          /*  if (e.target.value.trim() === "") {
+                emptyMessage.style.display = 'block';
+            } else {
+                emptyMessage.style.display = 'none';
+            }*/
+        emptyMessage.style.display = e.target.value.trim() === "" ? 'block' : 'none';
+
+        });
+    </script>
+</body>
+</html>
