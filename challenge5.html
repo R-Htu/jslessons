@@ -43,22 +43,36 @@ Write your code to accomplish this task.
       }
       .challenge5-container {
         background-color: rgb(204, 204, 205);
-        padding:20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding:30px;
+        text-align: center;
         flex-direction: column;
+        width: 100%;
+        max-width: 350px;
         border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
         box-shadow:2px 3px 20px inset rgba(241, 67, 3, 0.5);
       }
       .challenge5-container:hover{
         transform: translateY(-10px);
+        box-shadow:inset 1px 1px 50px rgba(57, 218, 12, 0.7);
       }
+      .challenge5-container h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+      .input-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
       input{
         padding: 10px;
         border-radius: 8px;
-        margin:10px 0;
         flex-grow: 1;
         border: 1px solid transparent;
         transition: border-color 0.3s ease;
@@ -70,9 +84,10 @@ Write your code to accomplish this task.
       button{
         border: none;
         border-radius: 8px;
-        margin:10px;
         padding: 10px 20px;
         transition: all 0.3s ease-out;
+        cursor: pointer;
+        background-color: antiquewhite;
        
       }
       button:hover {
@@ -81,7 +96,7 @@ Write your code to accomplish this task.
 
       }
       p{
-        margin:5px 0;
+        margin-bottom: 10px;
       }
       span{
         color: rgb(142, 65, 6);
