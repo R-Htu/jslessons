@@ -18,13 +18,13 @@
             line-height: 1.6;
             color: #333;
             box-shadow: 0 4px 16px rgba(0, 0, 1, 0.5);
-            margin: 8px;
+            margin: 6px;
             border-radius: 8px;
             border-top-left-radius: 2rem;
         }
 
         h1, h2, strong{
-            color: #2c3e50;
+            color:#5e6a76;
         }
 
         p {
@@ -112,7 +112,6 @@
             }
         }
 
-     
         code {
             font-family: "Courier New", Courier, monospace;
             font-size: 1.1rem;
@@ -124,35 +123,102 @@
             position: fixed;
             top: 2rem;
             right: 2rem;
-            width: ;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: #535c65;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
         }
-    
+
+        #lesson-nav-btn {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            font-size: 2rem;
+            color: white;
+            background-color: #535c65;
+            border: none;
+            cursor: pointer;
+        }
+
+        #nav-ul {
+            display: none;
+            background-color: #485665;
+            position: fixed;
+            top: 8rem;
+            right: 2rem;
+            width: 13rem;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            list-style-type: none;
+            margin: 0;
+            max-height: 70vh; 
+            overflow-y: auto; 
+        }
+        #nav-ul li a {
+            color: white;
+            padding: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            list-style: none;
+            text-decoration: none;
+            display: block;
+        }
+
+        #nav-ul li:hover {
+            background-color: #34495e;
+        }
+
+        #close-btn {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            color: rgb(246, 7, 7);
+            width: 2.1rem;
+            height: 2.1rem;
+            background-color: #c5cfd2;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
 
   
 
     </style>
 </head>
-
 <body>
     <div class="lesson-nav">
-        <button>///</button>
-        <ul>
-            <li>L1.Intro. to Web Development</li>
-            <li>L2. Intro. to HTML</li>
-            <li>L3. Intro. to CSS</li>
-            <li>L4. Advanced CSS</li>
-            <li>L5. Intro. to JavaScript</li>
-            <li>L6. Project 1</li>
-            <li>L7. Project 2</li>
-            <li>L8. Project 3</li>
-            <li>L9. Project 4</li>
-            <li>L10.Bootstrap or Tailwind</li>
-            <li>L11. React</li>
-            <li>L12. Figma</li>
-            <li>L13. Git & GitHub</li>
-            <li>L14. Pofolio Development</li>
-            <li>L15.Deployment</li>
+        <button id="lesson-nav-btn">/?/</button>
+        <ul id="nav-ul">
+            <button id="close-btn">&times;</button>
+            <li><a href="#lesson1">L1. Intro. to Web Development</a></li>
+            <li><a href="#lesson2">L2. Intro. to HTML</a></li>
+            <li><a href="#lesson3">L3. Intro. to CSS</a></li>
+            <li><a href="#lesson4">L4. Advanced CSS</a></li>
+            <li><a href="#lesson5">L5. Intro. to JavaScript</a></li>
+            <li><a href="#lesson6">L6. Project 1</a></li>
+            <li><a href="#lesson7">L7. Project 2</a></li>
+            <li><a href="#lesson8">L8. Project 3</a></li>
+            <li><a href="#lesson9">L9. Project 4</a></li>
+            <li><a href="#lesson10">L10. Bootstrap or Tailwind</a></li>
+            <li><a href="#lesson11">L11. React</a></li>
+            <li><a href="#lesson12">L12. Figma</a></li>
+            <li><a href="#lesson13">L13. Git & GitHub</a></li>
+            <li><a href="#lesson14">L14. Portfolio Development</a></li>
+            <li><a href="#lesson15">L15. Deployment</a></li>
+            <li><a href="#lesson16">L16. </a></li>
+            <li><a href="#lesson17">L17. </a></li>
+            <li><a href="#lesson18">L18. </a></li>
+            <li><a href="#lesson19">L19. </a></li>
+            <li><a href="#lesson20">L20. </a></li>
         </ul>
+        
     </div>
     <h2>What is a <strong>programming language</strong>?</h2>
     <br>
@@ -181,7 +247,7 @@
         </li>
     </ul>
 
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson1">
         <h2 class="lesson-title">Lesson 1: Introduction to Web Development</h2>
         <p class="lesson-goal">Goal: Introduce basic web development concepts and set up the development environment.</p>
         <div class="lesson-content">
@@ -207,7 +273,7 @@
             </div>
         </div>
     </div>
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson2">
         <h2 class="lesson-title">Lesson 2: Introduction to HTML</h2>
         <p class="lesson-goal">Goal: Teach the structure of a webpage using HTML.</p>
         <div class="lesson-content">
@@ -237,7 +303,7 @@
         </div>
     </div>
 
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson3">
         <h2 class="lesson-title">Lesson 3: Introduction to CSS (Cascading Style Sheets)</h2>
         <p class="lesson-goal">Goal: Teach how to style web pages using CSS.</p>
         <div class="lesson-content">
@@ -271,7 +337,7 @@
         </div>
     </div>
 
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson4">
         <h2 class="lesson-title">Lesson 4: Advanced CSS (Responsive Design)</h2>
         <p class="lesson-goal">Goal: Teach how to make web pages responsive using CSS.</p>
         <div class="lesson-content">
@@ -300,7 +366,7 @@
         </div>
     </div>
 
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson5">
         <h2 class="lesson-title">Lesson 5: Introduction to JavaScript</h2>
         <p class="lesson-goal">Goal: Teach the basics of JavaScript for adding interactivity to webpages.</p>
         <div class="lesson-content">
@@ -329,7 +395,7 @@
                     </ul>
                 </li>
             </ul>
-            <div class="task">
+            <div class="task" id="lesson6">
                 <p><strong>Practice Task:</strong> Write a script that changes the background color of the webpage when a button is clicked.</p>
             </div>
         </div>
@@ -362,7 +428,7 @@
             </div>
         </div>
     </div>
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson7">
         <h2 class="lesson-title">Lesson 7: Project 2 - Build a Personal Blog</h2>
         <p class="lesson-goal">Goal: Create a personal blog website with dynamic content using HTML, CSS, and JavaScript.</p>
         <div class="lesson-content">
@@ -392,7 +458,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson8">
         <h2 class="lesson-title">Lesson 8: Project 3 - Build a Portfolio Website with Interactive Features</h2>
         <p class="lesson-goal">Goal: Create an interactive portfolio website that showcases your projects and skills.</p>
         <div class="lesson-content">
@@ -428,7 +494,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson9">
         <h2 class="lesson-title">Lesson 9: Project 4 - Build a Weather Dashboard</h2>
         <p class="lesson-goal">Goal: Create a weather dashboard that pulls real-time weather data from an API and displays it dynamically.</p>
         <div class="lesson-content">
@@ -464,7 +530,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson10">
         <h2 class="lesson-title">Lesson 10: Bootstrap or Tailwind</h2>
         <p class="lesson-goal">Goal: Learn how to use CSS frameworks like Bootstrap or Tailwind for faster and responsive web development.</p>
         <div class="lesson-content">
@@ -488,7 +554,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson11">
         <h2 class="lesson-title">Lesson 11: React</h2>
         <p class="lesson-goal">Goal: Introduction to React for building interactive user interfaces, managing state, and handling user events.</p>
         <div class="lesson-content">
@@ -514,7 +580,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson12">
         <h2 class="lesson-title">Lesson 12: Figma</h2>
         <p class="lesson-goal">Goal: Learn how to design user interfaces (UIs) and create wireframes with Figma for better UX/UI design.</p>
         <div class="lesson-content">
@@ -539,7 +605,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson13">
         <h2 class="lesson-title">Lesson 13: Git & GitHub</h2>
         <p class="lesson-goal">Goal: Learn version control with Git, and how to collaborate and share projects using GitHub.</p>
         <div class="lesson-content">
@@ -564,7 +630,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson14">
         <h2 class="lesson-title">Lesson 14: Portfolio Development</h2>
         <p class="lesson-goal">Goal: Build a personal portfolio website to showcase your skills, projects, and experience.</p>
         <div class="lesson-content">
@@ -589,7 +655,7 @@
             </ul>
         </div>
     </div>
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson15">
         <h2 class="lesson-title">Lesson 15: Deployment (Netlify, Vercel, etc.)</h2>
         <p class="lesson-goal">Goal: Learn how to deploy websites and web apps using platforms like Netlify, Vercel, or GitHub Pages for production.</p>
         <div class="lesson-content">
@@ -610,7 +676,7 @@
             </ul>
         </div>
     </div>
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesso16">
         <h2 class="lesson-title">Lesson 16: Building Web Games with React</h2>
         <p class="lesson-goal">Goal: Learn how to create simple interactive games using React.</p>
         <div class="lesson-content">
@@ -629,7 +695,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson17">
         <h2 class="lesson-title">Lesson 17: Introduction to Firebase for Backend Development</h2>
         <p class="lesson-goal">Goal: Learn the basics of backend development with Firebase, including authentication and real-time database integration.</p>
         <div class="lesson-content">
@@ -648,7 +714,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson18">
         <h2 class="lesson-title">Lesson 18: Real-Time Data with Firebase</h2>
         <p class="lesson-goal">Goal: Learn how to interact with Firebase's Firestore database to store and display real-time data.</p>
         <div class="lesson-content">
@@ -666,7 +732,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson19">
         <h2 class="lesson-title">Lesson 19: Connecting Firebase with React for User Data</h2>
         <p class="lesson-goal">Goal: Integrate Firebase with React to manage user data and create a dynamic web app.</p>
         <div class="lesson-content">
@@ -683,7 +749,7 @@
         </div>
     </div>
     
-    <div class="lesson-plan">
+    <div class="lesson-plan" id="lesson20">
         <h2 class="lesson-title">Lesson 20: Deploying Firebase Apps with React</h2>
         <p class="lesson-goal">Goal: Learn how to deploy React apps with Firebase integration to platforms like Netlify, Vercel, or Firebase Hosting.</p>
         <div class="lesson-content">
@@ -700,6 +766,6 @@
             </ul>
         </div>
     </div>
-    
+    <script src="lessonplans.js"> </script>
 </body>
 </html>
