@@ -17,6 +17,10 @@
             padding: 30px;
             line-height: 1.6;
             color: #333;
+            box-shadow: 0 4px 16px rgba(0, 0, 1, 0.5);
+            margin: 8px;
+            border-radius: 8px;
+            border-top-left-radius: 2rem;
         }
 
         h1, h2, strong{
@@ -51,7 +55,7 @@
         .lesson-plan {
             background-color: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 4px 16px rgba(0, 230, 0, 0.3);
+            box-shadow: 0 4px 16px rgba(0, 0, 1, 0.5);
             margin-bottom: 40px;
             padding: 20px;
         }
@@ -70,7 +74,7 @@
         }
 
         .task {
-            background-color: #ecf0f1;
+            background-color: #c5cfd2;
             padding: 15px;
             margin-top: 20px;
             border-radius: 8px;
@@ -116,6 +120,13 @@
             padding: 3px 6px;
             border-radius: 5px;
         }
+        .lesson-nav {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            width: ;
+        }
+    
 
   
 
@@ -123,6 +134,26 @@
 </head>
 
 <body>
+    <div class="lesson-nav">
+        <button>///</button>
+        <ul>
+            <li>L1.Intro. to Web Development</li>
+            <li>L2. Intro. to HTML</li>
+            <li>L3. Intro. to CSS</li>
+            <li>L4. Advanced CSS</li>
+            <li>L5. Intro. to JavaScript</li>
+            <li>L6. Project 1</li>
+            <li>L7. Project 2</li>
+            <li>L8. Project 3</li>
+            <li>L9. Project 4</li>
+            <li>L10.Bootstrap or Tailwind</li>
+            <li>L11. React</li>
+            <li>L12. Figma</li>
+            <li>L13. Git & GitHub</li>
+            <li>L14. Pofolio Development</li>
+            <li>L15.Deployment</li>
+        </ul>
+    </div>
     <h2>What is a <strong>programming language</strong>?</h2>
     <br>
     <p>
@@ -445,7 +476,7 @@
                 <li><strong>Customizing Frameworks:</strong> Learn how to customize the look and feel of your website using utility classes or Bootstrap's customization options.</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Create a responsive grid layout using either Bootstrap or Tailwind that displays items in a 3-column layout on desktop and switches to 1 column on mobile.</li>
@@ -471,7 +502,7 @@
                 <li><strong>Component Lifecycle:</strong> Understanding component lifecycle methods in class components and the equivalent with hooks.</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Create a simple React component that displays a greeting message (e.g., "Hello, World!") and renders it to the page.</li>
@@ -496,7 +527,7 @@
                 <li><strong>Prototyping:</strong> Creating clickable prototypes to simulate user interactions.</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Create a simple wireframe for a landing page, including a header, main content section, and footer.</li>
@@ -521,7 +552,7 @@
                 <li><strong>Best Practices:</strong> Learn best practices for committing, writing commit messages, and managing branches.</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Initialize a new Git repository in your local project and commit your first changes.</li>
@@ -547,7 +578,7 @@
                 <li><strong>Contact Form:</strong> Add a contact form to your portfolio for visitors to reach out to you.</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Design the homepage of your portfolio with a navigation menu, header, and footer.</li>
@@ -570,7 +601,7 @@
                 <li><strong>Domain Setup:</strong> Learn how to link a custom domain to your deployed site.</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Set up continuous deployment from your GitHub repository to Netlify or Vercel so that every change you push to GitHub is automatically deployed.</li>
@@ -590,7 +621,7 @@
                 <li><strong>Building a Rock, Paper, Scissors Game:</strong> Using React to handle user input and game logic.</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Build a simple memory card game using React. Include features like shuffling cards and tracking the score.</li>
@@ -609,7 +640,7 @@
                 <li><strong>Firebase Firestore Database:</strong> Introduction to Firestore and setting it up for storing and retrieving data.</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Build a simple React app where users can log in using Firebase Authentication and add items to a Firestore database.</li>
@@ -627,7 +658,7 @@
                 <li><strong>CRUD Operations in Firestore:</strong> Performing Create, Read, Update, and Delete (CRUD) operations with Firestore.</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Create a simple "to-do list" app with Firebase Firestore where users can add, edit, and delete tasks in real-time.</li>
@@ -644,7 +675,7 @@
                 <li><strong>Firestore Security Rules:</strong> Setting up Firebase Firestore security rules to secure user data and managing read/write permissions.</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Build a simple blog app where users can sign in and post content, ensuring that users can only edit their own posts.</li>
@@ -662,7 +693,7 @@
                 <li><strong>Managing Firebase Deployments:</strong> Using Firebase's hosting features to manage different environments (e.g., development, production).</li>
             </ul>
         </div>
-        <div class="practice-exercises">
+        <div class="practice-exercises task">
             <h3>Practice Exercises:</h3>
             <ul>
                 <li>Deploy the Firebase-based React app you created to Firebase Hosting or another deployment platform like Netlify or Vercel.</li>
