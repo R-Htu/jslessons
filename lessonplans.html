@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            padding: 30px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, strong{
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 1.1rem;
+            text-indent: 30px;
+            margin-bottom: 20px; 
+        }
+
+        ul {
+            margin-left: 30px;
+            font-size: 1rem;
+            margin-bottom: 20px; 
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        b {
+            font-weight: normal;
+        }
+
+       
+        .lesson-plan {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 230, 0, 0.3);
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        .lesson-title {
+            color: #2c3e50;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .lesson-goal {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .task {
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .task p {
+            margin: 0;
+        }
+
+  
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .lesson-plan {
+                padding: 15px;
+            }
+
+            .lesson-title {
+                font-size: 1.4rem;
+            }
+
+            .lesson-goal {
+                font-size: 1rem;
+            }
+
+            ul {
+                font-size: 0.9rem;
+            }
+
+            .task p {
+                font-size: 0.9rem;
+            }
+        }
+
+     
+        code {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1.1rem;
+            background-color: #f4f4f4;
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+
+  
+
+    </style>
+</head>
+
+<body>
+    <h2>What is a <strong>programming language</strong>?</h2>
+    <br>
+    <p>
+        A <strong>programming language</strong> is a formal system of communication used by developers to give
+        instructions to a computer. These instructions, or "code," tell the computer what tasks to perform.
+        Programming languages consist of a set of rules (syntax) and symbols (keywords, operators, etc.) that allow
+        a programmer to write software, build applications, and manipulate data.
+    </p>
+    <br>
+    <p>Some examples of popular programming languages include:</p>
+    <br>
+    <ul>
+        <li><strong>Python:</strong> Known for its simplicity and readability, it is often used in web development, data
+            analysis, and artificial intelligence.
+        </li>
+        <li><strong>JavaScript:</strong> Primarily used for web development to add interactivity to websites.</li>
+        <li><strong>Java:</strong> Widely used for building large-scale enterprise applications, mobile apps (Android),
+            and more.
+        </li>
+        <li><strong>C++:</strong> Used for performance-critical applications, such as video games, operating systems, and
+            hardware drivers.
+        </li>
+        <li><strong>Ruby:</strong> Known for its elegant syntax, Ruby is often used in web development, particularly with the
+            Ruby on Rails framework.
+        </li>
+    </ul>
+
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 1: Introduction to Web Development</h2>
+        <p class="lesson-goal">Goal: Introduce basic web development concepts and set up the development environment.</p>
+        <div class="lesson-content">
+            <ul>
+                <li>What is Web Development?</li>
+                <li>Frontend vs Backend Development.</li>
+                <li>Tools and Languages: HTML, CSS, JavaScript.</li>
+                <li>Setting up Development Environment:
+                    <ul>
+                        <li>Installing a Text Editor (e.g., Visual Studio Code, Sublime Text).</li>
+                        <li>Introduction to Browser Developer Tools (Inspect, Console).</li>
+                    </ul>
+                </li>
+                <li>Basic HTML Structure:
+                    <ul>
+                        <li>Understanding the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags.</li>
+                        <li>How to create a basic webpage using HTML.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="task">
+                <p><strong>Practice Task:</strong> Create a simple HTML page with a heading, a paragraph, and an image.</p>
+            </div>
+        </div>
+    </div>
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 2: Introduction to HTML</h2>
+        <p class="lesson-goal">Goal: Teach the structure of a webpage using HTML.</p>
+        <div class="lesson-content">
+            <ul>
+                <li>HTML Elements and Tags:
+                    <ul>
+                        <li>Common Tags: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;div&gt;</code>, and <code>&lt;span&gt;</code>.</li>
+                        <li>Attributes in HTML (e.g., <code>src</code>, <code>href</code>, <code>alt</code>, etc.).</li>
+                    </ul>
+                </li>
+                <li>Creating Links and Images:
+                    <ul>
+                        <li>Anchor tags for linking pages (<code>&lt;a href="link"&gt;</code>).</li>
+                        <li>Adding images (<code>&lt;img src="image.jpg" alt="description"&gt;</code>).</li>
+                    </ul>
+                </li>
+                <li>Lists and Tables:
+                    <ul>
+                        <li>How to create ordered and unordered lists.</li>
+                        <li>Introduction to tables and their basic structure.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="task">
+                <p><strong>Practice Task:</strong> Create a webpage with links to different pages, an image, and a table.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 3: Introduction to CSS (Cascading Style Sheets)</h2>
+        <p class="lesson-goal">Goal: Teach how to style web pages using CSS.</p>
+        <div class="lesson-content">
+            <ul>
+                <li>What is CSS?
+                    <ul>
+                        <li>Inline CSS, Internal CSS, and External CSS.</li>
+                    </ul>
+                </li>
+                <li>CSS Selectors:
+                    <ul>
+                        <li>Class selectors (<code>.classname</code>), ID selectors (<code>#id</code>), and element selectors (<code>p</code>, <code>h1</code>, etc.).</li>
+                    </ul>
+                </li>
+                <li>Basic Styling:
+                    <ul>
+                        <li>Changing text color, font, background color, margins, padding.</li>
+                        <li>Box Model concept: margin, border, padding, content.</li>
+                    </ul>
+                </li>
+                <li>CSS Layout:
+                    <ul>
+                        <li>Using float, display, and position.</li>
+                        <li>Introduction to Flexbox for layout design.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="task">
+                <p><strong>Practice Task:</strong> Style the HTML page created earlier using CSS (colors, fonts, margins, etc.).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 4: Advanced CSS (Responsive Design)</h2>
+        <p class="lesson-goal">Goal: Teach how to make web pages responsive using CSS.</p>
+        <div class="lesson-content">
+            <ul>
+                <li>Responsive Design:
+                    <ul>
+                        <li>What is responsive design?</li>
+                        <li>Introduction to Media Queries.</li>
+                    </ul>
+                </li>
+                <li>Mobile-First Design:
+                    <ul>
+                        <li>Building a mobile-first layout with responsive breakpoints.</li>
+                    </ul>
+                </li>
+                <li>Flexbox and Grid Layouts:
+                    <ul>
+                        <li>Introduction to Flexbox for flexible layouts.</li>
+                        <li>Introduction to CSS Grid for complex layouts.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="task">
+                <p><strong>Practice Task:</strong> Create a responsive webpage that adjusts for both mobile and desktop.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 5: Introduction to JavaScript</h2>
+        <p class="lesson-goal">Goal: Teach the basics of JavaScript for adding interactivity to webpages.</p>
+        <div class="lesson-content">
+            <ul>
+                <li>What is JavaScript?
+                    <ul>
+                        <li>Understanding the role of JavaScript in web development.</li>
+                    </ul>
+                </li>
+                <li>Basic Syntax:
+                    <ul>
+                        <li>Variables, data types, and operators.</li>
+                        <li>Functions, loops, and conditionals.</li>
+                    </ul>
+                </li>
+                <li>DOM Manipulation:
+                    <ul>
+                        <li>Introduction to the Document Object Model (DOM).</li>
+                        <li>Accessing HTML elements via JavaScript (<code>document.getElementById</code>, <code>document.querySelector</code>).</li>
+                    </ul>
+                </li>
+                <li>Event Handling:
+                    <ul>
+                        <li>Understanding JavaScript events (click, load, etc.).</li>
+                        <li>Adding interactivity (e.g., button click event).</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="task">
+                <p><strong>Practice Task:</strong> Write a script that changes the background color of the webpage when a button is clicked.</p>
+            </div>
+        </div>
+    </div>
+
+   <div class="lesson-content">
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 6: Project 1 - Build a Multi-Page Website</h2>
+        <p class="lesson-goal">Goal: Create a more complex, multi-page website.</p>
+        <div class="lesson-content">
+            <ul>
+                <li>Website Structure:
+                    <ul>
+                        <li>Planning and organizing multiple pages (Home, About, Services, Portfolio, Contact).</li>
+                    </ul>
+                </li>
+                <li>Navigation and Links:
+                    <ul>
+                        <li>Setting up navigation between multiple pages.</li>
+                    </ul>
+                </li>
+                <li>CSS and JavaScript Enhancements:
+                    <ul>
+                        <li>Styling and adding interactivity (e.g., slideshows, form validation).</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="task">
+                <p><strong>Practice Task:</strong> Build a complete multi-page website, utilizing everything learned so far.</p>
+            </div>
+        </div>
+    </div>
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 7: Project 2 - Build a Personal Blog</h2>
+        <p class="lesson-goal">Goal: Create a personal blog website with dynamic content using HTML, CSS, and JavaScript.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Website Structure:</strong>
+                    <ul>
+                        <li>Planning the blog structure (Home, About, Blog Posts, Contact).</li>
+                        <li>Setting up a basic blog layout with a sidebar, post listings, and footer.</li>
+                    </ul>
+                </li>
+                <li><strong>Blog Posts:</strong>
+                    <ul>
+                        <li>Creating dynamic blog post pages with links to individual blog entries.</li>
+                        <li>Using JavaScript to simulate dynamic content (you can later replace this with a CMS).</li>
+                    </ul>
+                </li>
+                <li><strong>Styling and Enhancements:</strong>
+                    <ul>
+                        <li>Styling the blog for readability and visual appeal (typography, spacing, colors).</li>
+                        <li>Implementing interactivity (like a "load more" button for blog posts, smooth scrolling, etc.).</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="task">
+                <p><strong>Practice Task:</strong> Build a personal blog that lists blog posts on the homepage and links to individual post pages. Include a contact form and an About section.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 8: Project 3 - Build a Portfolio Website with Interactive Features</h2>
+        <p class="lesson-goal">Goal: Create an interactive portfolio website that showcases your projects and skills.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Website Structure:</strong>
+                    <ul>
+                        <li>Planning the structure of your portfolio (Home, About Me, Projects, Skills, Contact).</li>
+                        <li>Setting up a navigation menu and layout for each section.</li>
+                    </ul>
+                </li>
+                <li><strong>Portfolio Projects:</strong>
+                    <ul>
+                        <li>Displaying your previous work in an organized manner (image grids, descriptions, links to live demos or repositories).</li>
+                        <li>Adding animations or hover effects to your project items using CSS or JavaScript.</li>
+                    </ul>
+                </li>
+                <li><strong>Skills Section and Contact Form:</strong>
+                    <ul>
+                        <li>Creating a section to display your skills (e.g., web development, design, etc.).</li>
+                        <li>Implementing a contact form where users can reach out to you directly from your site.</li>
+                    </ul>
+                </li>
+                <li><strong>Enhancements:</strong>
+                    <ul>
+                        <li>Adding interactivity (e.g., scroll effects, smooth transitions, or a carousel for showcasing projects).</li>
+                        <li>Optimizing the design for mobile responsiveness.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="task">
+                <p><strong>Practice Task:</strong> Build your personal portfolio website. Make sure to include a home page, an About Me section, a Projects section, a skills showcase, and a contact form. Add interactive elements to engage the user.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 9: Project 4 - Build a Weather Dashboard</h2>
+        <p class="lesson-goal">Goal: Create a weather dashboard that pulls real-time weather data from an API and displays it dynamically.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Website Structure:</strong>
+                    <ul>
+                        <li>Planning the layout for your weather dashboard (search bar, current weather, forecast, etc.).</li>
+                        <li>Setting up a simple, clean design with sections for current weather, hourly forecast, and weekly forecast.</li>
+                    </ul>
+                </li>
+                <li><strong>Fetching Weather Data:</strong>
+                    <ul>
+                        <li>Using an API (such as OpenWeatherMap) to fetch real-time weather data based on user input (e.g., city name or zip code).</li>
+                        <li>Handling errors such as invalid cities or API issues with user-friendly messages.</li>
+                    </ul>
+                </li>
+                <li><strong>Displaying Data:</strong>
+                    <ul>
+                        <li>Displaying weather information (temperature, humidity, wind speed) dynamically on the page.</li>
+                        <li>Designing the UI to clearly display the weather data in a user-friendly way (icons, temperatures, etc.).</li>
+                    </ul>
+                </li>
+                <li><strong>Enhancements:</strong>
+                    <ul>
+                        <li>Implementing a search function where the user can input a city and get live weather updates.</li>
+                        <li>Adding features such as toggling between Celsius and Fahrenheit or displaying additional details like sunrise/sunset times.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="task">
+                <p><strong>Practice Task:</strong> Build a weather dashboard that allows users to enter a city name and view the current weather data along with a 7-day forecast. Include interactive elements such as a search bar, toggling temperature units, and showing weather icons.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 10: Bootstrap or Tailwind</h2>
+        <p class="lesson-goal">Goal: Learn how to use CSS frameworks like Bootstrap or Tailwind for faster and responsive web development.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Introduction to CSS Frameworks:</strong> Understand what Bootstrap and Tailwind are and why they’re useful.</li>
+                <li><strong>Getting Started:</strong> Installing and setting up Bootstrap or Tailwind in a project.</li>
+                <li><strong>Creating Responsive Grids:</strong> Learn how to create layouts using flexbox or grid systems provided by these frameworks.</li>
+                <li><strong>Building UI Components:</strong> Learn how to implement pre-made components like buttons, forms, cards, navigation bars, and modals.</li>
+                <li><strong>Customizing Frameworks:</strong> Learn how to customize the look and feel of your website using utility classes or Bootstrap's customization options.</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Create a responsive grid layout using either Bootstrap or Tailwind that displays items in a 3-column layout on desktop and switches to 1 column on mobile.</li>
+                <li>Design a simple navigation bar with links and a logo using Bootstrap or Tailwind.</li>
+                <li>Build a simple contact form with input fields (name, email, message) using Bootstrap or Tailwind.</li>
+                <li>Style a card component with an image, title, and text using Bootstrap or Tailwind classes.</li>
+                <li>Customize a button component with colors, hover effects, and rounded corners using Bootstrap or Tailwind.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 11: React</h2>
+        <p class="lesson-goal">Goal: Introduction to React for building interactive user interfaces, managing state, and handling user events.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Understanding React:</strong> What React is and why it's popular for building modern web applications.</li>
+                <li><strong>React Components:</strong> Introduction to functional and class components in React.</li>
+                <li><strong>JSX:</strong> Learn how JSX works and how it is used to write HTML-like code in JavaScript.</li>
+                <li><strong>State and Props:</strong> Understanding state management and how to pass data using props.</li>
+                <li><strong>React Hooks:</strong> Introduction to hooks such as <code>useState</code> for managing state and <code>useEffect</code> for side-effects.</li>
+                <li><strong>Handling Events:</strong> Learn how to handle user interactions like clicks and input changes.</li>
+                <li><strong>Component Lifecycle:</strong> Understanding component lifecycle methods in class components and the equivalent with hooks.</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Create a simple React component that displays a greeting message (e.g., "Hello, World!") and renders it to the page.</li>
+                <li>Build a counter component that increments and decrements a number using the <code>useState</code> hook.</li>
+                <li>Create a to-do list app where you can add and remove tasks using state and props.</li>
+                <li>Build a form in React with controlled inputs for a name and email, and submit the form data.</li>
+                <li>Implement a button that toggles between showing and hiding content when clicked using the <code>useState</code> hook.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 12: Figma</h2>
+        <p class="lesson-goal">Goal: Learn how to design user interfaces (UIs) and create wireframes with Figma for better UX/UI design.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Introduction to Figma:</strong> Understanding Figma's interface, tools, and its collaboration features.</li>
+                <li><strong>Creating Wireframes:</strong> How to create basic wireframes and prototypes for websites and apps.</li>
+                <li><strong>UI Components:</strong> Learn how to design reusable components like buttons, forms, and navigation bars in Figma.</li>
+                <li><strong>Design Systems:</strong> Introduction to design systems and how to use components, styles, and grids to maintain consistency in designs.</li>
+                <li><strong>Collaborating in Figma:</strong> Working with teams in real-time and gathering feedback through comments.</li>
+                <li><strong>Prototyping:</strong> Creating clickable prototypes to simulate user interactions.</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Create a simple wireframe for a landing page, including a header, main content section, and footer.</li>
+                <li>Design a button and a form input field (e.g., email input) using Figma's vector tools.</li>
+                <li>Build a small card component (like a product card) that includes an image, title, description, and a call-to-action button.</li>
+                <li>Create a navigation bar in Figma that includes links for Home, About, Services, and Contact.</li>
+                <li>Create a prototype of a login form with two screens: a login page and a success page. Link the two screens in Figma's prototype mode.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 13: Git & GitHub</h2>
+        <p class="lesson-goal">Goal: Learn version control with Git, and how to collaborate and share projects using GitHub.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Understanding Git:</strong> What Git is, its role in software development, and the importance of version control.</li>
+                <li><strong>Basic Git Commands:</strong> Learn basic Git commands such as <code>git init</code>, <code>git add</code>, <code>git commit</code>, <code>git push</code>, <code>git pull</code>, and <code>git clone</code>.</li>
+                <li><strong>Branching and Merging:</strong> How to create branches and merge them back into the main branch.</li>
+                <li><strong>Using GitHub:</strong> How to create repositories on GitHub, upload code, and manage projects.</li>
+                <li><strong>Collaboration with GitHub:</strong> Working with others using pull requests, issues, and branches for teamwork.</li>
+                <li><strong>Best Practices:</strong> Learn best practices for committing, writing commit messages, and managing branches.</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Initialize a new Git repository in your local project and commit your first changes.</li>
+                <li>Clone an existing GitHub repository to your local machine, make changes, and push them back to GitHub.</li>
+                <li>Create a new branch, make some changes, and then merge the branch back into the main branch.</li>
+                <li>Collaborate with a teammate on GitHub: fork a repository, make changes, and create a pull request.</li>
+                <li>Write a clear commit message for a change you made and push it to a GitHub repository.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 14: Portfolio Development</h2>
+        <p class="lesson-goal">Goal: Build a personal portfolio website to showcase your skills, projects, and experience.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Planning Your Portfolio:</strong> Understand what sections your portfolio needs, such as Home, About Me, Projects, and Contact.</li>
+                <li><strong>HTML Structure:</strong> Learn how to structure your portfolio using HTML and create a navigation menu.</li>
+                <li><strong>CSS Styling:</strong> Style your portfolio with modern design principles like whitespace, typography, and layout consistency.</li>
+                <li><strong>Responsive Design:</strong> Make your portfolio responsive to look good on both desktop and mobile devices.</li>
+                <li><strong>Adding Interactivity:</strong> Use JavaScript to add interactive elements like a "scroll to top" button or image hover effects.</li>
+                <li><strong>Showcasing Projects:</strong> Learn how to display your projects with images, descriptions, and links to live demos or repositories.</li>
+                <li><strong>Contact Form:</strong> Add a contact form to your portfolio for visitors to reach out to you.</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Design the homepage of your portfolio with a navigation menu, header, and footer.</li>
+                <li>Build the About Me section of your portfolio, including a photo and a short bio.</li>
+                <li>Create a Project Gallery section that includes links and descriptions for at least three projects you've worked on.</li>
+                <li>Implement a contact form with fields for name, email, and message.</li>
+                <li>Ensure your portfolio is responsive by adding media queries to adjust layout for mobile and tablet devices.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 15: Deployment (Netlify, Vercel, etc.)</h2>
+        <p class="lesson-goal">Goal: Learn how to deploy websites and web apps using platforms like Netlify, Vercel, or GitHub Pages for production.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>What is Web Hosting:</strong> Understanding the concept of hosting and why it's necessary for a live website.</li>
+                <li><strong>Netlify & Vercel:</strong> Introduction to deployment platforms like Netlify and Vercel, and how to deploy static and dynamic websites.</li>
+                <li><strong>Continuous Deployment:</strong> Setting up continuous deployment with GitHub to automatically deploy changes.</li>
+                <li><strong>Deploying with GitHub Pages:</strong> How to host a static site directly from a GitHub repository using GitHub Pages.</li>
+                <li><strong>Domain Setup:</strong> Learn how to link a custom domain to your deployed site.</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Set up continuous deployment from your GitHub repository to Netlify or Vercel so that every change you push to GitHub is automatically deployed.</li>
+                <li>Deploy a React app to Vercel and verify that it functions properly.</li>
+                <li>Link a custom domain (e.g., from GoDaddy or Namecheap) to your deployed site on Netlify or Vercel.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 16: Building Web Games with React</h2>
+        <p class="lesson-goal">Goal: Learn how to create simple interactive games using React.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Introduction to Game Development with React:</strong> Setting up the game loop and handling game state.</li>
+                <li><strong>Building a Tic-Tac-Toe Game:</strong> React components for rendering the game board and managing game logic.</li>
+                <li><strong>Building a Memory Card Game:</strong> Using React state for game cards and handling user interactions and shuffling cards.</li>
+                <li><strong>Building a Rock, Paper, Scissors Game:</strong> Using React to handle user input and game logic.</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Build a simple memory card game using React. Include features like shuffling cards and tracking the score.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 17: Introduction to Firebase for Backend Development</h2>
+        <p class="lesson-goal">Goal: Learn the basics of backend development with Firebase, including authentication and real-time database integration.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Introduction to Firebase:</strong> What is Firebase and how it provides backend services like Firestore, Firebase Authentication, and Firebase Storage.</li>
+                <li><strong>Setting Up Firebase Project:</strong> Creating a Firebase project and integrating it with a React app.</li>
+                <li><strong>Firebase Authentication:</strong> Setting up Firebase authentication (email/password and social logins) and handling user authentication state in React.</li>
+                <li><strong>Firebase Firestore Database:</strong> Introduction to Firestore and setting it up for storing and retrieving data.</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Build a simple React app where users can log in using Firebase Authentication and add items to a Firestore database.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 18: Real-Time Data with Firebase</h2>
+        <p class="lesson-goal">Goal: Learn how to interact with Firebase's Firestore database to store and display real-time data.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Real-Time Data in Firebase:</strong> Retrieving and displaying real-time data with Firestore.</li>
+                <li><strong>Displaying Data in React:</strong> Using Firestore data to dynamically render a list in React, and handling loading and error states.</li>
+                <li><strong>CRUD Operations in Firestore:</strong> Performing Create, Read, Update, and Delete (CRUD) operations with Firestore.</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Create a simple "to-do list" app with Firebase Firestore where users can add, edit, and delete tasks in real-time.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 19: Connecting Firebase with React for User Data</h2>
+        <p class="lesson-goal">Goal: Integrate Firebase with React to manage user data and create a dynamic web app.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>User Authentication and Data Management:</strong> Storing user-specific data in Firebase Firestore after user logs in, and displaying personalized data based on the logged-in user.</li>
+                <li><strong>Firestore Security Rules:</strong> Setting up Firebase Firestore security rules to secure user data and managing read/write permissions.</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Build a simple blog app where users can sign in and post content, ensuring that users can only edit their own posts.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lesson-plan">
+        <h2 class="lesson-title">Lesson 20: Deploying Firebase Apps with React</h2>
+        <p class="lesson-goal">Goal: Learn how to deploy React apps with Firebase integration to platforms like Netlify, Vercel, or Firebase Hosting.</p>
+        <div class="lesson-content">
+            <ul>
+                <li><strong>Firebase Hosting Setup:</strong> How to deploy a React app to Firebase Hosting, setting up Firebase CLI and hosting the app.</li>
+                <li><strong>Integrating Firebase with Netlify or Vercel:</strong> Deploying Firebase-powered apps on platforms like Netlify or Vercel while using Firebase for backend services.</li>
+                <li><strong>Managing Firebase Deployments:</strong> Using Firebase's hosting features to manage different environments (e.g., development, production).</li>
+            </ul>
+        </div>
+        <div class="practice-exercises">
+            <h3>Practice Exercises:</h3>
+            <ul>
+                <li>Deploy the Firebase-based React app you created to Firebase Hosting or another deployment platform like Netlify or Vercel.</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

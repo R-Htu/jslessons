@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .cart-summary {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .cart-summary strong {
+            color: #333;
+        }
+        .cart-summary .total-price {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .cart-summary .discount {
+            color: #ffc107;
+            font-weight: bold;
+        }
+        .cart-summary .final-price {
+            color: #dc3545;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Shopping Cart</h1>
+        <div id="cart-summary" class="cart-summary">
+            <!-- The result will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        // Example items in the cart
+        const items = [
+            { name: 'Shirt', price: 20 },
+            { name: 'Jeans', price: 40 },
+            { name: 'Shoes', price: 60 }
+        ];
+
+        // Function to calculate total price of items
+        function calculateTotalPrice(items) {
+            return items.reduce((total, item) => total + item.price, 0);
+        }
+
+        // Function to apply discount
+        function applyDiscount(price, discount) {
+            return price - (price * discount/100);
+        }
+
+        // Function to calculate the final price after discount
+        function calculateFinalPrice(items, discount) {
+            const totalPrice = calculateTotalPrice(items);
+            return applyDiscount(totalPrice, discount);
+        }
+
+        // Apply discount and calculate final price
+        const discountPercent = 20; 
+        const totalPrice = calculateTotalPrice(items);
+        const finalPrice = calculateFinalPrice(items, discount);
+
+        // Display the results in the cart-summary section
+        document.getElementById("cart-summary").innerHTML = `
+            <p><strong>Total Price:</strong> $${totalPrice}</p>
+            <p><strong>Discount Applied:</strong> 10%</p>
+            <p><strong class="final-price">Final Price after Discount:</strong> $${finalPrice.toFixed(2)}</p>
+        `;
+    </script>
+
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <p id="cart-summary"></p> 
+
+    <script>
+       
+        const items = [
+            { name: 'Shirt', price: 20 },
+            { name: 'Jeans', price: 40 },
+            { name: 'Shoes', price: 60 }
+        ];
+
+     
+        function calculateTotalPrice(items) {
+            let total = 0;
+            for (let i = 0; i < items.length; i++) {
+                total += items[i].price;
+            }
+            return total;
+        }
+
+    
+        function applyDiscount(price, discount) {
+            return price * (1 - discount);
+        }
+
+        
+        function calculateFinalPrice(items, discount) {
+            let totalPrice = calculateTotalPrice(items);
+            return applyDiscount(totalPrice, discount);
+        }
+
+      
+        const discount = 0.1; 
+        const totalPrice = calculateTotalPrice(items);
+        const finalPrice = calculateFinalPrice(items, discount);
+
+     
+        document.getElementById("cart-summary").innerHTML = `
+            <strong>Total Price:</strong> $${totalPrice}<br>
+            <strong>Discount Applied:</strong> ${discount * 100}%<br>
+            <strong>Final Price after Discount:</strong> $${finalPrice.toFixed(2)}
+        `;
+    </script>
+</body>
+</html> -->
